@@ -24,7 +24,7 @@ def mydata():
     if b['disposable']==True:
         a={'status':'False'}
     else:
-        m=Message(request.form['sub'], sender = 'angel@rohitchouhan.com', recipients=[request.form['email']])
+        m=Message(request.form['sub'], sender = 'Your Username', recipients=[request.form['email']])
         m.body=request.form['content']
         mail.send(m)
         a={'status':'True'}
