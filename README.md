@@ -1,2 +1,1 @@
-# Python-mail-sender
-A application to send mail using SMTP in python
+https://i.postimg.cc/TPsb99w3/m1.png
