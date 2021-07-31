@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Mail</title>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+	<body>
+			
+	</body>
+	
+		{%if x['status']=='True' :%}
+			<script>Swal.fire(
+							'Good job!',
+							'Mail Has been Sent!',
+							'success'
+			);
+			window.href.location="/";
+			</script>	
+		{%else:%}
+			<script>Swal.fire(
+							'Rejected!',
+							'Mail is not safe!',
+							'error'
+			);
+			window.href.location="/";
+			</script>
+		{%endif%}
+	
+</html>

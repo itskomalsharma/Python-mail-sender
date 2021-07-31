@@ -1,0 +1,93 @@
+<html>
+<head>
+	<title>Mail</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+		
+		#app {
+			padding: 10px;
+			font-family: "DM Sans", Helvetica, Arial, sans-serif;
+		}
+		
+		textarea {
+			width: 820px;
+			min-height: 250px;
+			padding: 2px;
+			resize: none;
+			overflow: hidden;
+			background-color: transparent;
+			border: none;
+			border-radius: 4px;
+			font-family: "DM Sans", Helvetica, Arial, sans-serif;
+			font-size: 1rem;
+			color: #000;
+		}
+		
+		textarea:focus {
+			outline:none;
+		}
+		#btn {background:#f50057;
+				width:110px;
+				margin-bottom:10px;
+				margin-right:40px;
+				border-radius:7px;
+				float:right;
+		
+		}
+	</style>
+
+</head>
+	<body>
+		<div class="container-block">
+		<br><br>
+			<div class="row bg primary">
+				<div class="col-2"></div>
+				<div class="col-8">
+				<center>
+				<img  style="width:100px;" src="https://www.freeiconspng.com/thumbs/gmail-icon/communication-gmail-icon-3.png">
+					<h3 class="animate__animated animate__bounce">Mail Sender</h3>
+					<p>Send mail in one click, developed by <a target="_blank" href="https://linkedin.com/in/itskomalsharma">Komal Sharma</a></p>			
+						</center>
+					<div class="card">
+						<div style="background:#f50057;height:40px;color:white;padding:8px 0px 0px 5px;font-weight:bold;">Gmail</div>
+						<form method="post" action="http://localhost:5000/mydata">
+							<div class="input-field col s12">
+								<input type="text" id="autocomplete-input" class="autocomplete" name="email">
+								<label for="autocomplete-input">To</label>
+							</div>
+							<div class="input-field col s12" style="">
+								<input type="text" id="autocomplete-input" class="autocomplete" name="sub">
+								<label for="autocomplete-input">Subject</label>
+							</div>
+							<div id="app" style="margin-left:">
+								<textarea placeholder="write a massage..." name="content"></textarea>
+							</div>
+							<button id="btn" class="btn waves-effect pulse" type="submit" name="action">Send<i class="material-icons right">send</i></button>
+						</form>
+					</div>
+				</div>
+				<div class="col-2"></div>
+			</div>
+		</div>  	
+	</body>
+	<script>
+		export default {
+			methods: {
+			resize() {
+				let element = this.$refs["textarea"];
+		
+				element.style.height = "18px";
+				element.style.height = element.scrollHeight + "px";
+			},
+			},
+		};
+	</script>
+</html>
